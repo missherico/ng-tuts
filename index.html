@@ -40,6 +40,16 @@
 			</li>
 		</ul>
 
+			<!-- this will demonstrate ng-show, ng-hide -->
+      <ul>
+          <li ng-repeat='person in people | filter:searchText' ng-show='person.live == true'>#{{person.id}} {{person.name}} is live = true</li>
+          <li ng-repeat='person in people | filter:searchText' ng-show='person.live == false'>#{{person.id}} {{person.name}} is live = false</li>
+      </ul>
+
+      <!-- now we will create a new person, events -->
+      <input type='text' ng-model='newPerson' />
+      <button ng-click='addNew()'>Add</button>
+
 		</div>
 
 	</body>
